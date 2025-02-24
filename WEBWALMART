@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAQUINADO - Página Empresarial CNC</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #1c1c1e;
+            color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        /* Contenedor principal */
+        .container {
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Título principal */
+        h1 {
+            background: rgba(50, 50, 50, 0.8);
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 2.5rem;
+            color: #00aaff;
+            margin-bottom: 30px;
+            animation: slideIn 1.2s ease;
+        }
+
+        /* Opciones */
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .option {
+            flex: 1 1 200px;
+            max-width: 250px;
+        }
+
+        /* Estilo de los botones */
+        .option a {
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            background: #333;
+            border: 2px solid #00aaff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+            box-shadow: 0 6px 20px rgba(0, 170, 255, 0.3);
+            text-align: center;
+            transform: translateY(0);
+            animation: softBounce 5s infinite ease-in-out;
+            position: relative;
+        }
+
+        .option a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.5);
+            background: #555;
+        }
+
+        /* Efectos de animación */
+        @keyframes softBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Fondo industrial */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('https://www.toptal.com/designers/subtlepatterns/uploads/dark-mesh.png') repeat;
+            opacity: 0.8;
+        }
+
+        /* Icono de herramientas */
+        .option a::before {
+            content: "🔧";
+            font-size: 1.5rem;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            color: #00aaff;
+            animation: toolSpin 4s linear infinite;
+        }
+
+        @keyframes toolSpin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MAQUINADO</h1>
+        <div class="options">
+            <div class="option">
+                <a href="https://drive.google.com/file/d/1Jsb57W6S7Ta3-P-QW_vdka382AXbxc6m/view?usp=drive_link" target="_blank">
+                    PI LINK
+                </a>
+            </div>
+            <div class="option">
+                <a href="#">
+                    FRAME PLATE
+                </a>
+            </div>
+            <div class="option">
+                <a href="https://drive.google.com/file/d/1WamLYTSPTgEUfxIwUonBj22n5Uu9ki-S/view?usp=drive_link" target="_blank">
+                    TRUCK LH & RH
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fondo de malla industrial -->
+    <div class="background"></div>
+</body>
+</html>
